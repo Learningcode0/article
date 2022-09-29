@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ahmari world</title>
+</head>
+<body>
+  <!---practice Website--->
+
+  <div class="container">
+    <h1>Your News Now</h1>
+
+    <ul>
+    {% for article in news.articles %}
+        <li>
+            <h3><a target="_blank" href="https://www.nbcnews.com/">{{ article.title }}</a></h3>
+            <span>{{ article.source.name }} - <time> {{ article.publishedAt }}</time></span>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
